@@ -6,11 +6,11 @@ using System;
 
 public class InputController : MonoSingleton<InputController>
 {
-    public event Action<TouchPhase,Vector2> Clicked;
+    public event Action<TouchPhase, Vector2> Clicked;
 
-    private void Update() 
+    private void Update()
     {
-        InputControl();    
+        InputControl();
     }
 
     private void InputControl()
