@@ -35,36 +35,36 @@ public class Bird : MonoBehaviour
         {
             case TouchPhase.Began:
                 startTouchPosition = touchPosition;
-                springJoint.enabled = true;
                 break;
             case TouchPhase.Moved:
                 maxDistance = new Vector2
                 (
-                Mathf.Clamp(touchPosition.x, minPower.x, maxPower.x),
-                Mathf.Clamp(touchPosition.y, minPower.y, maxPower.y)
+                    Mathf.Clamp(touchPosition.x, minPower.x, maxPower.x),
+                    Mathf.Clamp(touchPosition.y, minPower.y, maxPower.y)
                 );
                 transform.position = maxDistance;
-                TrajectorLineDrawing(touchPosition,startTouchPosition);
+                SetTrajectoryPositions(touchPosition,startTouchPosition);
                 break;
             case TouchPhase.Stationary:
                 transform.position = maxDistance;
                 break;
             case TouchPhase.Ended:
                 rb.velocity = ((startTouchPosition - touchPosition).normalized * force * Vector2.Distance(touchPosition, startTouchPosition));
+                lineRenderer.enabled = false;
                 springJoint.enabled = false;
                 InputController.Instance.Clicked -= OnClicked;
                 break;
         }
     }
 
-    private Vector2[] Plot(Rigidbody2D rigidbody, Vector2 position, Vector2 velocity, int steps)
+    private Vector2[] Plot(Vector2 position, Vector2 velocity, int steps)
     {
         Vector2[] result = new Vector2[steps];
 
         float timeStep = Time.fixedDeltaTime / Physics2D.velocityIterations;
-        Vector2 gravityAccel = Physics2D.gravity * rigidbody.gravityScale * timeStep * timeStep;
+        Vector2 gravityAccel = Physics2D.gravity * rb.gravityScale * timeStep * timeStep;
 
-        float drag = 1f - timeStep * rigidbody.drag;
+        float drag = 1f - timeStep * rb.drag;
         Vector2 moveStep = velocity * timeStep;
 
         for (int i = 0; i < steps; i++)
@@ -78,10 +78,10 @@ public class Bird : MonoBehaviour
         return result;
     }
 
-    private void TrajectorLineDrawing(Vector2 touchPosition,Vector2 startTouchPosition)
+    private void SetTrajectoryPositions(Vector2 touchPosition,Vector2 startTouchPosition)
     {
-        Vector2 _velocity = (startTouchPosition - touchPosition) * force * Vector2.Distance(touchPosition, startTouchPosition);
-        Vector2[] trajector = Plot(rb, (Vector2)transform.position, _velocity, 500);
+        Vector2 velocity = (startTouchPosition - touchPosition).normalized * force * Vector2.Distance(touchPosition, startTouchPosition);
+        Vector2[] trajector = Plot((Vector2)transform.position, velocity, 500);
         lineRenderer.positionCount = trajector.Length;
         Vector3[] positions = new Vector3[trajector.Length];
         for (int i = 0; i < positions.Length; i++)
