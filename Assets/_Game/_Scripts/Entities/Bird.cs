@@ -16,14 +16,16 @@ public class Bird : MonoBehaviour
 
     private Vector2 maxDistance;
     private Rigidbody2D rb;
-    private SpringJoint2D sj;
+    private SpringJoint2D springJoint;
+    private LineRenderer lineRenderer;
 
     private Vector2 startTouchPosition;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        sj = GetComponent<SpringJoint2D>();
+        springJoint = GetComponent<SpringJoint2D>();
+        lineRenderer = GetComponent<LineRenderer>();
         InputController.Instance.Clicked += OnClicked;
     }
 
@@ -33,26 +35,59 @@ public class Bird : MonoBehaviour
         {
             case TouchPhase.Began:
                 startTouchPosition = touchPosition;
-                sj.enabled = true;
+                springJoint.enabled = true;
                 break;
             case TouchPhase.Moved:
-
                 maxDistance = new Vector2
                 (
                 Mathf.Clamp(touchPosition.x, minPower.x, maxPower.x),
                 Mathf.Clamp(touchPosition.y, minPower.y, maxPower.y)
                 );
                 transform.position = maxDistance;
+                TrajectorLineDrawing(touchPosition,startTouchPosition);
                 break;
             case TouchPhase.Stationary:
                 transform.position = maxDistance;
                 break;
             case TouchPhase.Ended:
                 rb.velocity = ((startTouchPosition - touchPosition).normalized * force * Vector2.Distance(touchPosition, startTouchPosition));
-                sj.enabled = false;
+                springJoint.enabled = false;
                 InputController.Instance.Clicked -= OnClicked;
-
                 break;
         }
+    }
+
+    private Vector2[] Plot(Rigidbody2D rigidbody, Vector2 position, Vector2 velocity, int steps)
+    {
+        Vector2[] result = new Vector2[steps];
+
+        float timeStep = Time.fixedDeltaTime / Physics2D.velocityIterations;
+        Vector2 gravityAccel = Physics2D.gravity * rigidbody.gravityScale * timeStep * timeStep;
+
+        float drag = 1f - timeStep * rigidbody.drag;
+        Vector2 moveStep = velocity * timeStep;
+
+        for (int i = 0; i < steps; i++)
+        {
+            moveStep += gravityAccel;
+            moveStep *= drag;
+            position += moveStep;
+            result[i] = position;
+        }
+
+        return result;
+    }
+
+    private void TrajectorLineDrawing(Vector2 touchPosition,Vector2 startTouchPosition)
+    {
+        Vector2 _velocity = (startTouchPosition - touchPosition) * force * Vector2.Distance(touchPosition, startTouchPosition);
+        Vector2[] trajector = Plot(rb, (Vector2)transform.position, _velocity, 500);
+        lineRenderer.positionCount = trajector.Length;
+        Vector3[] positions = new Vector3[trajector.Length];
+        for (int i = 0; i < positions.Length; i++)
+        {
+            positions[i] = trajector[i];
+        }
+        lineRenderer.SetPositions(positions);
     }
 }
