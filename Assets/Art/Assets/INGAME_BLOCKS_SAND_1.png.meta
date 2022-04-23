@@ -1,56 +1,600 @@
 fileFormatVersion: 2
 guid: 356be2509de14e24294b8edcaf30a96f
-timeCreated: 1466648881
-licenseType: Pro
 TextureImporter:
-  fileIDToRecycleName: {}
-  serializedVersion: 2
+  internalIDToNameTable:
+  - first:
+      213: -8734078270125327903
+    second: INGAME_BLOCKS_SAND_1_0
+  - first:
+      213: 7827578339001701488
+    second: INGAME_BLOCKS_SAND_1_1
+  - first:
+      213: -3005322282067143191
+    second: INGAME_BLOCKS_SAND_1_2
+  - first:
+      213: -7693088502983995646
+    second: INGAME_BLOCKS_SAND_1_3
+  - first:
+      213: 2626772828769628004
+    second: INGAME_BLOCKS_SAND_1_4
+  - first:
+      213: -1906408085202708385
+    second: INGAME_BLOCKS_SAND_1_5
+  - first:
+      213: 8877330855450650599
+    second: INGAME_BLOCKS_SAND_1_6
+  - first:
+      213: -4005546121811928554
+    second: INGAME_BLOCKS_SAND_1_7
+  - first:
+      213: -7752702539256676771
+    second: INGAME_BLOCKS_SAND_1_8
+  - first:
+      213: 5678327455425366784
+    second: INGAME_BLOCKS_SAND_1_9
+  - first:
+      213: 11236638368663176
+    second: INGAME_BLOCKS_SAND_1_10
+  - first:
+      213: 5108152124070827147
+    second: INGAME_BLOCKS_SAND_1_11
+  - first:
+      213: 8361598805479850827
+    second: INGAME_BLOCKS_SAND_1_12
+  - first:
+      213: -4573206290479408379
+    second: INGAME_BLOCKS_SAND_1_13
+  - first:
+      213: 3557292123563676434
+    second: INGAME_BLOCKS_SAND_1_14
+  - first:
+      213: -1274206086568898705
+    second: INGAME_BLOCKS_SAND_1_15
+  - first:
+      213: 7837926923308230013
+    second: INGAME_BLOCKS_SAND_1_16
+  - first:
+      213: 1849957411634997023
+    second: INGAME_BLOCKS_SAND_1_17
+  - first:
+      213: 7694349287639032888
+    second: INGAME_BLOCKS_SAND_1_18
+  - first:
+      213: -124648675065031186
+    second: INGAME_BLOCKS_SAND_1_19
+  - first:
+      213: 5691787191432947079
+    second: INGAME_BLOCKS_SAND_1_20
+  externalObjects: {}
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
+    sRGBTexture: 1
     linearTexture: 0
-    correctGamma: 0
     fadeOut: 0
     borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
   bumpmap:
     convertToNormalMap: 0
     externalNormalMap: 0
-    heightScale: .25
+    heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
   grayScaleToAlpha: 0
-  generateCubemap: 0
+  generateCubemap: 6
   cubemapConvolution: 0
-  cubemapConvolutionSteps: 8
-  cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -3
   maxTextureSize: 1024
   textureSettings:
-    filterMode: -1
+    serializedVersion: 2
+    filterMode: 1
     aniso: 16
-    mipBias: -1
-    wrapMode: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
-  rGBM: 0
   compressionQuality: 50
-  allowsAlphaSplitting: 0
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
-  spritePivot: {x: .5, y: .5}
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
   alphaIsTransparency: 1
+  spriteTessellationDetail: -1
   textureType: 8
-  buildTargetSettings: []
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
-    sprites: []
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_SAND_1_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 148
+        width: 81
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e9b8b4a6125ac680800000000000000
+      internalID: -8734078270125327903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_SAND_1_1
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 149
+        width: 81
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0741dbbe60521ac60800000000000000
+      internalID: 7827578339001701488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_SAND_1_2
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 149
+        width: 79
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e552ddae43fa46d0800000000000000
+      internalID: -3005322282067143191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_SAND_1_3
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 156
+        width: 73
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20f4ff924c8ac3590800000000000000
+      internalID: -7693088502983995646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_SAND_1_4
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 189
+        width: 121
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46f267478fb247420800000000000000
+      internalID: 2626772828769628004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_SAND_1_5
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 190
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f585f8472f31b85e0800000000000000
+      internalID: -1906408085202708385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_SAND_1_6
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 80
+        width: 74
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e720c0016d923b70800000000000000
+      internalID: 8877330855450650599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_SAND_1_7
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 146
+        width: 121
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61ad4f546017968c0800000000000000
+      internalID: -4005546121811928554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_SAND_1_8
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 147
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5e365abd1ed86490800000000000000
+      internalID: -7752702539256676771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_SAND_1_9
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 65
+        width: 81
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00b0af25cb87dce40800000000000000
+      internalID: 5678327455425366784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_SAND_1_10
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 67
+        width: 79
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8860f6eb9abe72000800000000000000
+      internalID: 11236638368663176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_SAND_1_11
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 67
+        width: 79
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8416edea4dc3e640800000000000000
+      internalID: 5108152124070827147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_SAND_1_12
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 104
+        width: 121
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4305fadfcd5a0470800000000000000
+      internalID: 8361598805479850827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_SAND_1_13
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 104
+        width: 40
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50b9463db15b880c0800000000000000
+      internalID: -4573206290479408379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_SAND_1_14
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 26
+        width: 41
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 213de4bc65a0e5130800000000000000
+      internalID: 3557292123563676434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_SAND_1_15
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 26
+        width: 40
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6f8b67b05c115ee0800000000000000
+      internalID: -1274206086568898705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_SAND_1_16
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 27
+        width: 40
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d75e1477209e5cc60800000000000000
+      internalID: 7837926923308230013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_SAND_1_17
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 3
+        width: 74
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f17ea12e67e5ca910800000000000000
+      internalID: 1849957411634997023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_SAND_1_18
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 62
+        width: 82
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 834218329e1d7ca60800000000000000
+      internalID: 7694349287639032888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_SAND_1_19
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 22
+        width: 81
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee59601c0b8254ef0800000000000000
+      internalID: -124648675065031186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INGAME_BLOCKS_SAND_1_20
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 21
+        width: 81
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 785aa725b4a4dfe40800000000000000
+      internalID: 5691787191432947079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 095f8ae568727934f86ba6d771d7ee5c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
   spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
