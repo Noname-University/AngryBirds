@@ -5,18 +5,21 @@ using UnityEngine;
 public class Obstacle : MonoBehaviour,IDestroyable
 {
     [SerializeField]
-    private float healt;
+    private float health;
 
 
-    
     public void Destroy()
     {
-        throw new System.NotImplementedException();
+        Destroy(gameObject);
     }
 
-    public void Hit()
+    public void Hit(float damage)
     {
-        throw new System.NotImplementedException();
+        health -= damage;
+        if (health <= 0)
+        {
+            Destroy();    
+        }
     }
 
 }

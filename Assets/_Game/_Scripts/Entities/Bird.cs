@@ -28,6 +28,17 @@ public class Bird : MonoBehaviour
         InputController.Instance.Clicked += OnClicked;
     }
 
+    private void OnCollisionEnter(Collision other) 
+    {
+        Debug.Log("asdasd");
+        var destroyable=other.gameObject.GetComponent<IDestroyable>();
+        if (destroyable!=null)
+        {
+             destroyable.Hit(rb.velocity.magnitude);
+        }
+       
+    }
+
     private void OnClicked(TouchPhase phase, Vector2 touchPosition)
     {
         switch (phase)
@@ -89,4 +100,5 @@ public class Bird : MonoBehaviour
         }
         lineRenderer.SetPositions(positions);
     }
+
 }

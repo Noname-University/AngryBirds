@@ -1,6 +1,6 @@
 public interface IDestroyable 
 {
     void Destroy();
-    
-    void Hit();
+
+    void Hit(float damage);
 }
