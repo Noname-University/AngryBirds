@@ -20,16 +20,22 @@ public class Bird : MonoBehaviour
     private LineRenderer lineRenderer;
     private Vector2 startTouchPosition;
 
-    private void Start()
-    {   
-        
-    }
-
-    public void Register()
+    private void Start() 
     {
         rb = GetComponent<Rigidbody2D>();
         springJoint = GetComponent<SpringJoint2D>();
         lineRenderer = GetComponent<LineRenderer>();
+        lineRenderer.enabled = false;
+        rb.velocity = Vector2.zero;
+
+        GetComponent<SpringJoint2D>().enabled=false;
+    }
+
+    public void Register(Rigidbody2D throwPoint)
+    {
+        GetComponent<SpringJoint2D>().enabled=true;
+        GetComponent<SpringJoint2D>().connectedBody = throwPoint;
+
         InputController.Instance.Clicked += OnClicked;
     }
 
@@ -50,6 +56,7 @@ public class Bird : MonoBehaviour
         {
             case TouchPhase.Began:
                 startTouchPosition = touchPosition;
+                lineRenderer.enabled = true;
                 break;
             case TouchPhase.Moved:
                 maxDistance = new Vector2
@@ -58,7 +65,7 @@ public class Bird : MonoBehaviour
                     Mathf.Clamp(touchPosition.y, minPower.y, maxPower.y)
                 );
                 transform.position = maxDistance;
-                //SetTrajectoryPositions(touchPosition,startTouchPosition);
+                SetTrajectoryPositions(touchPosition,startTouchPosition);
                 break;
             case TouchPhase.Stationary:
                 transform.position = maxDistance;
@@ -68,6 +75,7 @@ public class Bird : MonoBehaviour
                 lineRenderer.enabled = false;
                 springJoint.enabled = false;
                 InputController.Instance.Clicked -= OnClicked;
+                GameManager.Instance.UpdateGameState(GameStates.Unclickable);
                 break;
         }
     }

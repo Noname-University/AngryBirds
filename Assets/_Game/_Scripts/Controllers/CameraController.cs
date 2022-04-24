@@ -5,8 +5,15 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    [SerializeField]
     private Camera mainCamera;
+
+    private Vector3 startPosition;
+
+    private void Start() 
+    {
+        mainCamera = Camera.main;
+        startPosition = mainCamera.transform.position;
+    }
     
     private void FixedUpdate() 
     {
@@ -14,10 +21,19 @@ public class CameraController : MonoBehaviour
     }
     private void CameraMovement()
     {
-        if (BirdController.Instance.CurrentBird.transform.position.x >= 0)
+        switch (GameManager.Instance.GameState)
         {
-            //mainCamera.transform.position = new Vector3(bird.transform.position.x,0,-10);
-            mainCamera.transform.position = Vector3.Lerp(new Vector3(mainCamera.transform.position.x,4.33f,-10),new Vector3(BirdController.Instance.CurrentBird.transform.position.x,4.33f,-10),0.125f);
+            case GameStates.Clickable:
+                mainCamera.transform.position = Vector3.Lerp(mainCamera.transform.position,startPosition,0.125f);
+            break;
+            case GameStates.Unclickable:
+                if(BirdController.Instance.CurrentBird != null)
+                    if (BirdController.Instance.CurrentBird.transform.position.x >= 5)
+                    {
+                        mainCamera.transform.position = Vector3.Lerp(new Vector3(mainCamera.transform.position.x,4.33f,-10),new Vector3(BirdController.Instance.CurrentBird.transform.position.x,4.33f,-10),0.125f);
+                    }
+            break;
         }
+        
     }
 }

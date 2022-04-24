@@ -845,7 +845,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0853c26b1d57bb048948424a5fc68d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 749938607}
 --- !u!1001 &1046095095
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1640,7 +1639,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8143fdcda6c0c7e4483315522265dc30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  birds:
+  birdPrefabs:
   - {fileID: 1652647683721659550, guid: 3a62e283ffd095d4ab0940f9ac43e2ff, type: 3}
   - {fileID: 1652647683721659550, guid: 3a62e283ffd095d4ab0940f9ac43e2ff, type: 3}
   - {fileID: 1652647683721659550, guid: 3a62e283ffd095d4ab0940f9ac43e2ff, type: 3}
