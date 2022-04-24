@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 7187596515505708460}
   - component: {fileID: 7366569324181108780}
   - component: {fileID: 4832709065215851158}
+  - component: {fileID: 6851413077498145895}
   m_Layer: 0
   m_Name: SquareWood
   m_TagString: Untagged
@@ -162,3 +163,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &6851413077498145895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2880908676267927713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51d5eda358e2715469978d78e45a3978, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 2
