@@ -18,7 +18,6 @@ public class Bird : MonoBehaviour
     private Rigidbody2D rb;
     private SpringJoint2D springJoint;
     private LineRenderer lineRenderer;
-
     private Vector2 startTouchPosition;
 
     private void Start()

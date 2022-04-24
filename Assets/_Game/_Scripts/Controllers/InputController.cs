@@ -1,15 +1,14 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using Helpers;
-using System;
+using UnityEngine;
 
 public class InputController : MonoSingleton<InputController>
 {
     public event Action<TouchPhase, Vector2> Clicked;
-
-    private void Update()
-    {
+    
+    private void Update() {
         InputControl();
     }
 
