@@ -14,7 +14,7 @@ public class GameManager : MonoSingleton<GameManager>
 
     private void Start() 
     {
-        UpdateGameState(GameStates.Game);    
+        UpdateGameState(GameStates.Clickable);    
     }
 
     public void UpdateGameState(GameStates newState)

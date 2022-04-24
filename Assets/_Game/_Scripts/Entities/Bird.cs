@@ -25,18 +25,23 @@ public class Bird : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         springJoint = GetComponent<SpringJoint2D>();
         lineRenderer = GetComponent<LineRenderer>();
+        
+    }
+
+    public void Register()
+    {
         InputController.Instance.Clicked += OnClicked;
     }
 
-    private void OnCollisionEnter(Collision other) 
+
+
+    private void OnCollisionEnter2D(Collision2D other) 
     {
-        Debug.Log("asdasd");
         var destroyable=other.gameObject.GetComponent<IDestroyable>();
         if (destroyable!=null)
         {
              destroyable.Hit(rb.velocity.magnitude);
         }
-       
     }
 
     private void OnClicked(TouchPhase phase, Vector2 touchPosition)

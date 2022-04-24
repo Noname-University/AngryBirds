@@ -1,6 +1,7 @@
 public enum GameStates
 {
-    Game,
+    Clickable,
+    Unclickable,
     Success,
     Fail,
     Start
