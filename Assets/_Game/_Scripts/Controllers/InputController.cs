@@ -8,7 +8,8 @@ public class InputController : MonoSingleton<InputController>
 {
     public event Action<TouchPhase, Vector2> Clicked;
     
-    private void Update() {
+    private void Update()
+    {
         InputControl();
     }
 

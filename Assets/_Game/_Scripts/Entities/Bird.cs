@@ -21,15 +21,15 @@ public class Bird : MonoBehaviour
     private Vector2 startTouchPosition;
 
     private void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-        springJoint = GetComponent<SpringJoint2D>();
-        lineRenderer = GetComponent<LineRenderer>();
+    {   
         
     }
 
     public void Register()
     {
+        rb = GetComponent<Rigidbody2D>();
+        springJoint = GetComponent<SpringJoint2D>();
+        lineRenderer = GetComponent<LineRenderer>();
         InputController.Instance.Clicked += OnClicked;
     }
 
@@ -58,7 +58,7 @@ public class Bird : MonoBehaviour
                     Mathf.Clamp(touchPosition.y, minPower.y, maxPower.y)
                 );
                 transform.position = maxDistance;
-                SetTrajectoryPositions(touchPosition,startTouchPosition);
+                //SetTrajectoryPositions(touchPosition,startTouchPosition);
                 break;
             case TouchPhase.Stationary:
                 transform.position = maxDistance;

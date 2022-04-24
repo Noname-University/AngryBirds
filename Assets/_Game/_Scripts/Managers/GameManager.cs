@@ -14,7 +14,8 @@ public class GameManager : MonoSingleton<GameManager>
 
     private void Start() 
     {
-        UpdateGameState(GameStates.Clickable);    
+        UpdateGameState(GameStates.Start);
+        LeanTween.delayedCall(2, ()=> UpdateGameState(GameStates.Clickable));    
     }
 
     public void UpdateGameState(GameStates newState)
