@@ -6,9 +6,9 @@ public class Obstacle : DestroyableBase
 {
     private Rigidbody2D rb;
 
-    private void Start() 
+    private void Start()
     {
-        rb= GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -19,6 +19,7 @@ public class Obstacle : DestroyableBase
             destroyable.Hit(rb.velocity.magnitude);
         }
     }
+
 
     public override void Hit(float damage)
     {
