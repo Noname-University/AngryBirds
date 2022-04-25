@@ -261,6 +261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
+  scoreValue: 50
 --- !u!1 &7215837341904544645
 GameObject:
   m_ObjectHideFlags: 0
