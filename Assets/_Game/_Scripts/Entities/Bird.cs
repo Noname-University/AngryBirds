@@ -20,7 +20,7 @@ public class Bird : MonoBehaviour
     private LineRenderer lineRenderer;
     private Vector2 startTouchPosition;
 
-    private void Start() 
+    private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         springJoint = GetComponent<SpringJoint2D>();
@@ -28,12 +28,12 @@ public class Bird : MonoBehaviour
         lineRenderer.enabled = false;
         rb.velocity = Vector2.zero;
 
-        GetComponent<SpringJoint2D>().enabled=false;
+        GetComponent<SpringJoint2D>().enabled = false;
     }
 
     public void Register(Rigidbody2D throwPoint)
     {
-        GetComponent<SpringJoint2D>().enabled=true;
+        GetComponent<SpringJoint2D>().enabled = true;
         GetComponent<SpringJoint2D>().connectedBody = throwPoint;
 
         InputController.Instance.Clicked += OnClicked;
@@ -41,12 +41,13 @@ public class Bird : MonoBehaviour
 
 
 
-    private void OnCollisionEnter2D(Collision2D other) 
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        var destroyable=other.gameObject.GetComponent<IDestroyable>();
-        if (destroyable!=null)
+        var destroyable = other.gameObject.GetComponent<IDestroyable>();
+        if (destroyable != null)
         {
-             destroyable.Hit(rb.velocity.magnitude);
+            destroyable.Hit(rb.velocity.magnitude);
+
         }
     }
 
@@ -65,7 +66,7 @@ public class Bird : MonoBehaviour
                     Mathf.Clamp(touchPosition.y, minPower.y, maxPower.y)
                 );
                 transform.position = maxDistance;
-                SetTrajectoryPositions(touchPosition,startTouchPosition);
+                SetTrajectoryPositions(touchPosition, startTouchPosition);
                 break;
             case TouchPhase.Stationary:
                 transform.position = maxDistance;
@@ -101,7 +102,7 @@ public class Bird : MonoBehaviour
         return result;
     }
 
-    private void SetTrajectoryPositions(Vector2 touchPosition,Vector2 startTouchPosition)
+    private void SetTrajectoryPositions(Vector2 touchPosition, Vector2 startTouchPosition)
     {
         Vector2 velocity = (startTouchPosition - touchPosition).normalized * force * Vector2.Distance(touchPosition, startTouchPosition);
         Vector2[] trajector = Plot((Vector2)transform.position, velocity, 500);
