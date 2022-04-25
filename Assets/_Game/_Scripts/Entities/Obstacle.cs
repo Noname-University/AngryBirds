@@ -2,19 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Obstacle : MonoBehaviour, IDestroyable
+public class Obstacle : DestroyableBase
 {
-    [SerializeField]
-    private float health;
+    private Rigidbody2D rb;
 
-    public void Destroy()
+    private void Start() 
     {
-        Destroy(gameObject);
+        rb= GetComponent<Rigidbody2D>();
     }
 
-    public void Hit(float damage)
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        health -= damage;
+        var destroyable = other.gameObject.GetComponent<Enemy>();
+        if (destroyable != null)
+        {
+            destroyable.Hit(rb.velocity.magnitude);
+        }
+    }
+
+    public override void Hit(float damage)
+    {
+        base.Hit(damage);
         if (health <= 7.5 && health > 5)
         {
             CloseAllSprites();
@@ -29,10 +37,6 @@ public class Obstacle : MonoBehaviour, IDestroyable
         {
             CloseAllSprites();
             transform.GetChild(3).gameObject.SetActive(true);
-        }
-        else if (health <= 0)
-        {
-            Destroy();
         }
 
     }
