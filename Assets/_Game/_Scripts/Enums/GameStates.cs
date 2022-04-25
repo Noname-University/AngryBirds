@@ -4,5 +4,6 @@ public enum GameStates
     Unclickable,
     Success,
     Fail,
-    Start
+    Start,
+    Ended
 }

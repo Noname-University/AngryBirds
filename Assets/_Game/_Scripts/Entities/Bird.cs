@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Bird : MonoBehaviour
 {
+    #region SerializeFields
+
     [SerializeField]
     private Vector2 minPower;
 
@@ -13,12 +15,19 @@ public class Bird : MonoBehaviour
     [SerializeField]
     private float force;
 
+    #endregion
+
+    #region Varriables
 
     private Vector2 maxDistance;
     private Rigidbody2D rb;
     private SpringJoint2D springJoint;
     private LineRenderer lineRenderer;
     private Vector2 startTouchPosition;
+
+    #endregion
+
+    #region Unity Methods
 
     private void Start()
     {
@@ -31,54 +40,24 @@ public class Bird : MonoBehaviour
         GetComponent<SpringJoint2D>().enabled = false;
     }
 
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        var destroyable = other.gameObject.GetComponent<DestroyableBase>();
+        if (destroyable != null)
+        {
+            destroyable.Hit(rb.velocity.magnitude);
+        }
+    }
+
+    #endregion
+
+    #region Methods
     public void Register(Rigidbody2D throwPoint)
     {
         GetComponent<SpringJoint2D>().enabled = true;
         GetComponent<SpringJoint2D>().connectedBody = throwPoint;
 
         InputController.Instance.Clicked += OnClicked;
-    }
-
-
-
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        var destroyable = other.gameObject.GetComponent<IDestroyable>();
-        if (destroyable != null)
-        {
-            destroyable.Hit(rb.velocity.magnitude);
-
-        }
-    }
-
-    private void OnClicked(TouchPhase phase, Vector2 touchPosition)
-    {
-        switch (phase)
-        {
-            case TouchPhase.Began:
-                startTouchPosition = touchPosition;
-                lineRenderer.enabled = true;
-                break;
-            case TouchPhase.Moved:
-                maxDistance = new Vector2
-                (
-                    Mathf.Clamp(touchPosition.x, minPower.x, maxPower.x),
-                    Mathf.Clamp(touchPosition.y, minPower.y, maxPower.y)
-                );
-                transform.position = maxDistance;
-                SetTrajectoryPositions(touchPosition, startTouchPosition);
-                break;
-            case TouchPhase.Stationary:
-                transform.position = maxDistance;
-                break;
-            case TouchPhase.Ended:
-                rb.velocity = ((startTouchPosition - touchPosition).normalized * force * Vector2.Distance(touchPosition, startTouchPosition));
-                lineRenderer.enabled = false;
-                springJoint.enabled = false;
-                InputController.Instance.Clicked -= OnClicked;
-                GameManager.Instance.UpdateGameState(GameStates.Unclickable);
-                break;
-        }
     }
 
     private Vector2[] Plot(Vector2 position, Vector2 velocity, int steps)
@@ -115,4 +94,38 @@ public class Bird : MonoBehaviour
         lineRenderer.SetPositions(positions);
     }
 
+    #endregion
+
+    #region Callbacks
+    private void OnClicked(TouchPhase phase, Vector2 touchPosition)
+    {
+        switch (phase)
+        {
+            case TouchPhase.Began:
+                startTouchPosition = touchPosition;
+                lineRenderer.enabled = true;
+                break;
+            case TouchPhase.Moved:
+                maxDistance = new Vector2
+                (
+                    Mathf.Clamp(touchPosition.x, minPower.x, maxPower.x),
+                    Mathf.Clamp(touchPosition.y, minPower.y, maxPower.y)
+                );
+                transform.position = maxDistance;
+                SetTrajectoryPositions(touchPosition, startTouchPosition);
+                break;
+            case TouchPhase.Stationary:
+                transform.position = maxDistance;
+                break;
+            case TouchPhase.Ended:
+                rb.velocity = ((startTouchPosition - touchPosition).normalized * force * Vector2.Distance(touchPosition, startTouchPosition));
+                lineRenderer.enabled = false;
+                springJoint.enabled = false;
+                InputController.Instance.Clicked -= OnClicked;
+                GameManager.Instance.UpdateGameState(GameStates.Unclickable);
+                break;
+        }
+    }
+
+    #endregion
 }

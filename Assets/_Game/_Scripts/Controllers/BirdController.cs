@@ -34,16 +34,22 @@ public class BirdController : MonoSingleton<BirdController>
 
     private void OnGameStateChanged(GameStates newState)
     {
-        if(newState == GameStates.Clickable && birdPrefabs.Length > index)
+        if (newState == GameStates.Clickable && birdPrefabs.Length > index)
         {
             currentBird = birds[index];
             currentBird.transform.position = throwPoint.transform.position;
             currentBird.Register(throwPoint.GetComponent<Rigidbody2D>());
             index++;
         }
-        else if (newState == GameStates.Unclickable)
+        else if (newState == GameStates.Unclickable && birdPrefabs.Length > index )
         {
-            LeanTween.delayedCall(2,()=> GameManager.Instance.UpdateGameState(GameStates.Clickable)); 
+            LeanTween.delayedCall(3,()=> GameManager.Instance.UpdateGameState(GameStates.Clickable)); 
         }
+        else if (birdPrefabs.Length == index)
+        {
+            LeanTween.delayedCall(3,()=> GameManager.Instance.UpdateGameState(GameStates.Ended)); 
+        }
+
+    
     }
 }
