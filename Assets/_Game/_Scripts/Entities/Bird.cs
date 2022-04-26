@@ -13,6 +13,8 @@ public class Bird : MonoBehaviour
     [SerializeField]
     private float force;
 
+    
+
     #endregion
 
     #region Varriables
@@ -20,7 +22,7 @@ public class Bird : MonoBehaviour
     private Vector2 maxDistance;
     private Rigidbody2D rb;
     private SpringJoint2D springJoint;
-    private LineRenderer lineRenderer;
+    private LineRenderer trajectoryPrediction;
     private Vector2 startTouchPosition;
 
     #endregion
@@ -31,8 +33,9 @@ public class Bird : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         springJoint = GetComponent<SpringJoint2D>();
-        lineRenderer = GetComponent<LineRenderer>();
-        lineRenderer.enabled = false;
+        trajectoryPrediction = GetComponent<LineRenderer>();
+  
+        trajectoryPrediction.enabled = false;
         rb.velocity = Vector2.zero;
 
         GetComponent<SpringJoint2D>().enabled = false;
@@ -84,14 +87,15 @@ public class Bird : MonoBehaviour
     {
         Vector2 velocity = (startTouchPosition - touchPosition).normalized * force * Vector2.Distance(touchPosition, startTouchPosition);
         Vector2[] trajector = Plot((Vector2)transform.position, velocity, 500);
-        lineRenderer.positionCount = trajector.Length;
+        trajectoryPrediction.positionCount = trajector.Length;
         Vector3[] positions = new Vector3[trajector.Length];
         for (int i = 0; i < positions.Length; i++)
         {
             positions[i] = trajector[i];
         }
-        lineRenderer.SetPositions(positions);
+        trajectoryPrediction.SetPositions(positions);
     }
+
 
     #endregion
 
@@ -104,7 +108,7 @@ public class Bird : MonoBehaviour
         {
             case TouchPhase.Began:
                 startTouchPosition = (Vector2)BirdController.Instance.ThrowPoint.position;
-                lineRenderer.enabled = true;
+                trajectoryPrediction.enabled = true;
                 break;
             case TouchPhase.Moved:
                 transform.position = startTouchPosition + desiredPosition;
@@ -114,8 +118,8 @@ public class Bird : MonoBehaviour
                 transform.position = startTouchPosition + desiredPosition;
                 break;
             case TouchPhase.Ended:
-                rb.velocity = ((startTouchPosition - touchPosition).normalized * force * Vector2.Distance(touchPosition, startTouchPosition));
-                lineRenderer.enabled = false;
+                rb.velocity = ((startTouchPosition - touchPosition).normalized * force * Vector2.Distance(transform.position, startTouchPosition));
+                trajectoryPrediction.enabled = false;
                 springJoint.enabled = false;
                 InputController.Instance.Clicked -= OnClicked;
                 GameManager.Instance.UpdateGameState(GameStates.Unclickable);
