@@ -13,6 +13,8 @@ public class BirdController : MonoSingleton<BirdController>
 
     [SerializeField]
     private GameObject throwPoint;
+    [SerializeField]
+    private int birdScore;
 
 
     private int index = 0;
@@ -20,6 +22,23 @@ public class BirdController : MonoSingleton<BirdController>
     public Bird CurrentBird => currentBird;
     private float timer;
     private bool isTimerActive = false;
+    private int birdCount;
+    public int BirdCount
+    {
+        get => birdCount;
+
+        set
+        {
+
+            birdCount += value;
+            Debug.Log(birdCount);
+            if (birdCount > 0)
+            {
+                ScoreController.Instance.IncreaseScore(birdScore);
+            }
+
+        }
+    }
 
 
 

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -38,7 +39,9 @@ public class Bird : MonoBehaviour
         rb.velocity = Vector2.zero;
 
         GetComponent<SpringJoint2D>().enabled = false;
+        GameManager.Instance.GameStateChanged += OnGameStateChanged;
     }
+
 
     private void OnCollisionEnter2D(Collision2D other)
     {
@@ -119,11 +122,22 @@ public class Bird : MonoBehaviour
                 break;
             case TouchPhase.Ended:
                 rb.velocity = ((startTouchPosition - touchPosition).normalized * force * Vector2.Distance(touchPosition, startTouchPosition));
+                BirdController.Instance.BirdCount = -1;
                 lineRenderer.enabled = false;
                 springJoint.enabled = false;
                 InputController.Instance.Clicked -= OnClicked;
                 GameManager.Instance.UpdateGameState(GameStates.Unclickable);
                 break;
+
+        }
+
+    }
+    private void OnGameStateChanged(GameStates newState)
+    {
+        if (newState == GameStates.Success)
+        {
+            BirdController.Instance.BirdCount = 1;
+
         }
     }
 
