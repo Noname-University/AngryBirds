@@ -41,3 +41,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 780199497
+    locked: 0
+  - name: SlingBack
+    uniqueID: 1256225347
+    locked: 0
+  - name: BackLine
+    uniqueID: 3249701941
+    locked: 0
+  - name: Entity
+    uniqueID: 1181242601
+    locked: 0
+  - name: FrontLine
+    uniqueID: 4192728107
+    locked: 0
+  - name: SlingFront
+    uniqueID: 984719035
+    locked: 0
