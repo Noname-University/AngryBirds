@@ -1798,6 +1798,7 @@ MonoBehaviour:
   - {fileID: 1652647683721659550, guid: 3a62e283ffd095d4ab0940f9ac43e2ff, type: 3}
   - {fileID: 1652647683721659550, guid: 3a62e283ffd095d4ab0940f9ac43e2ff, type: 3}
   throwPoint: {fileID: 1217758222}
+  birdScore: 1000
 --- !u!1 &2118636476
 GameObject:
   m_ObjectHideFlags: 0
