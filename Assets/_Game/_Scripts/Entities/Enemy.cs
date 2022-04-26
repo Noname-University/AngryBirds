@@ -14,5 +14,6 @@ public class Enemy : DestroyableBase
     {
         base.Destroy();
         EnemyManager.Instance.EnemyCount = -1;
+
     }
 }

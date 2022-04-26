@@ -15,7 +15,7 @@ public class EnemyManager : MonoSingleton<EnemyManager>
         {
 
             enemyCount += value;
-            Debug.Log(enemyCount);
+            // Debug.Log(enemyCount);
             if (EnemyCount == 0)
             {
                 GameManager.Instance.UpdateGameState(GameStates.Success);
