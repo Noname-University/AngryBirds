@@ -17,6 +17,22 @@ public class BirdController : MonoSingleton<BirdController>
     [SerializeField]
     private int birdScore;
 
+    [SerializeField]
+    private Transform leftLinePoint;
+
+    [SerializeField]
+    private Transform rightLinePoint;
+    
+    [SerializeField]
+    private LineRenderer leftLine;
+
+    [SerializeField]
+    private LineRenderer rightLine;
+
+    public Transform LeftLinePoint => leftLinePoint;
+    public Transform RightLinePoint => rightLinePoint;
+
+
 
     private int index = 0;
     private Bird currentBird;
@@ -52,6 +68,20 @@ public class BirdController : MonoSingleton<BirdController>
             GameManager.Instance.UpdateGameState(GameStates.Clickable);
             isTimerActive = false;
         }
+
+        if (GameManager.Instance.GameState == GameStates.Clickable)
+        {
+            SetSlingLines();
+        }
+    }
+
+    public void SetSlingLines()
+    {
+        leftLine.SetPosition(0,currentBird.transform.position );
+        rightLine.SetPosition(0, currentBird.transform.position);
+
+        leftLine.SetPosition(1,BirdController.Instance.LeftLinePoint.position);
+        rightLine.SetPosition(1,BirdController.Instance.RightLinePoint.position);
     }
 
     private void OnGameStateChanged(GameStates newState)
@@ -61,6 +91,8 @@ public class BirdController : MonoSingleton<BirdController>
             currentBird = birds[index];
             currentBird.transform.position = throwPoint.transform.position;
             currentBird.Register(throwPoint.GetComponent<Rigidbody2D>());
+            rightLine.enabled = true;
+            leftLine.enabled = true;
 
         }
         else if (newState == GameStates.Unclickable && birdPrefabs.Length > index)
@@ -68,7 +100,8 @@ public class BirdController : MonoSingleton<BirdController>
             timer = 3f;
             isTimerActive = true;
             index++;
-
+            rightLine.enabled = false;
+            leftLine.enabled = false;
         }
         else if (birdPrefabs.Length == index)
         {
@@ -82,6 +115,7 @@ public class BirdController : MonoSingleton<BirdController>
             ScoreController.Instance.IncreaseScore((birds.Length - index) * birdScore);
             Debug.Log("succes");
         }
+        
 
 
     }
