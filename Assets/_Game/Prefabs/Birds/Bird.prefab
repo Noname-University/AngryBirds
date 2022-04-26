@@ -136,8 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a612f308c61031b498596a4faf7c6206, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minPower: {x: -9, y: -5}
-  maxPower: {x: 0, y: 3.5}
+  maxLenght: 2
   force: 10
 --- !u!231 &1652647683721659541
 SpringJoint2D:

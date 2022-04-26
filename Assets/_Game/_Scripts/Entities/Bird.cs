@@ -8,10 +8,7 @@ public class Bird : MonoBehaviour
     #region SerializeFields
 
     [SerializeField]
-    private Vector2 minPower;
-
-    [SerializeField]
-    private Vector2 maxPower;
+    private float maxLenght;
 
     [SerializeField]
     private float force;
@@ -39,7 +36,6 @@ public class Bird : MonoBehaviour
         rb.velocity = Vector2.zero;
 
         GetComponent<SpringJoint2D>().enabled = false;
-        GameManager.Instance.GameStateChanged += OnGameStateChanged;
     }
 
 
@@ -102,27 +98,23 @@ public class Bird : MonoBehaviour
     #region Callbacks
     private void OnClicked(TouchPhase phase, Vector2 touchPosition)
     {
+        var desiredPosition = touchPosition - startTouchPosition;
+        desiredPosition = Vector2.ClampMagnitude(desiredPosition, maxLenght);
         switch (phase)
         {
             case TouchPhase.Began:
-                startTouchPosition = touchPosition;
+                startTouchPosition = (Vector2)BirdController.Instance.ThrowPoint.position;
                 lineRenderer.enabled = true;
                 break;
             case TouchPhase.Moved:
-                maxDistance = new Vector2
-                (
-                    Mathf.Clamp(touchPosition.x, minPower.x, maxPower.x),
-                    Mathf.Clamp(touchPosition.y, minPower.y, maxPower.y)
-                );
-                transform.position = maxDistance;
+                transform.position = startTouchPosition + desiredPosition;
                 SetTrajectoryPositions(touchPosition, startTouchPosition);
                 break;
             case TouchPhase.Stationary:
-                transform.position = maxDistance;
+                transform.position = startTouchPosition + desiredPosition;
                 break;
             case TouchPhase.Ended:
                 rb.velocity = ((startTouchPosition - touchPosition).normalized * force * Vector2.Distance(touchPosition, startTouchPosition));
-                BirdController.Instance.BirdCount = -1;
                 lineRenderer.enabled = false;
                 springJoint.enabled = false;
                 InputController.Instance.Clicked -= OnClicked;
@@ -132,14 +124,7 @@ public class Bird : MonoBehaviour
         }
 
     }
-    private void OnGameStateChanged(GameStates newState)
-    {
-        if (newState == GameStates.Success)
-        {
-            BirdController.Instance.BirdCount = 1;
 
-        }
-    }
 
     #endregion
 }
