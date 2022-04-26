@@ -7,7 +7,7 @@ using UnityEngine;
 public class InputController : MonoSingleton<InputController>
 {
     public event Action<TouchPhase, Vector2> Clicked;
-
+    private bool isBird = false;
     private void Update()
     {
         InputControl();
@@ -18,16 +18,27 @@ public class InputController : MonoSingleton<InputController>
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
-            Vector2 worldPoint = Camera.main.ScreenToWorldPoint(touch.position);
-            RaycastHit2D hit = Physics2D.Raycast(worldPoint, Vector2.zero);
-            if (hit)
+            if (touch.phase==TouchPhase.Began)
             {
-                if (hit.collider.gameObject.GetComponent<Bird>() != null)
+                Vector2 worldPoint = Camera.main.ScreenToWorldPoint(touch.position);
+                RaycastHit2D hit = Physics2D.Raycast(worldPoint, Vector2.zero);
+                if (hit)
                 {
-                    Debug.Log(Camera.main.ScreenToWorldPoint(touch.position));
-                    Clicked?.Invoke(touch.phase, Camera.main.ScreenToWorldPoint(touch.position));
+                    if (hit.collider.gameObject.GetComponent<Bird>() != null)
+                    {
+                        isBird=true;   
+                    }
                 }
             }
+            if (isBird)
+            {
+                Clicked?.Invoke(touch.phase, Camera.main.ScreenToWorldPoint(touch.position));
+            }
+            if (touch.phase==TouchPhase.Ended)
+            {
+                isBird=false;
+            }            
         }
+
     }
 }
