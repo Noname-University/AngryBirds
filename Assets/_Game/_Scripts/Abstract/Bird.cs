@@ -7,11 +7,10 @@ public abstract class Bird : MonoBehaviour
     #region SerializeFields
 
     [SerializeField]
-    private float maxLenght;
+    protected float maxLenght;
 
     [SerializeField]
-    private float force;
-
+    protected float force;
 
 
     #endregion
@@ -19,10 +18,11 @@ public abstract class Bird : MonoBehaviour
     #region Varriables
 
     private Vector2 maxDistance;
-    private Rigidbody2D rb;
-    private SpringJoint2D springJoint;
-    private LineRenderer trajectoryPrediction;
-    private Vector2 startTouchPosition;
+    protected Rigidbody2D rb;
+    protected SpringJoint2D springJoint;
+    protected LineRenderer trajectoryPrediction;
+    protected Vector2 startTouchPosition;
+    protected bool isTouchBird=false;
 
     #endregion
 
@@ -82,7 +82,7 @@ public abstract class Bird : MonoBehaviour
         return result;
     }
 
-    private void SetTrajectoryPositions(Vector2 touchPosition, Vector2 startTouchPosition)
+    protected void SetTrajectoryPositions(Vector2 touchPosition, Vector2 startTouchPosition)
     {
         Vector2 velocity = (startTouchPosition - touchPosition).normalized * force * Vector2.Distance(touchPosition, startTouchPosition);
         Vector2[] trajector = Plot((Vector2)transform.position, velocity, 500);
@@ -120,6 +120,7 @@ public abstract class Bird : MonoBehaviour
                 rb.velocity = ((startTouchPosition - touchPosition).normalized * force * Vector2.Distance(transform.position, startTouchPosition));
                 trajectoryPrediction.enabled = false;
                 springJoint.enabled = false;
+                isTouchBird=true;
                 break;
 
         }

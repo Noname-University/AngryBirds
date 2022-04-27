@@ -8,6 +8,7 @@ public class InputController : MonoSingleton<InputController>
 {
     public event Action<TouchPhase, Vector2> Clicked;
     private bool isBird = false;
+
     private void Update()
     {
         InputControl();
@@ -26,7 +27,7 @@ public class InputController : MonoSingleton<InputController>
                 {
                     if (hit.collider.gameObject.GetComponent<Bird>() != null)
                     {
-                        isBird=true;   
+                        isBird=true;
                     }
                 }
             }

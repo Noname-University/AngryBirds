@@ -119,7 +119,6 @@ public class BirdController : MonoSingleton<BirdController>
         {
             rightLine.enabled = false;
             leftLine.enabled = false;
-            GameManager.Instance.UpdateGameState(GameStates.Unclickable);
         }
 
 
