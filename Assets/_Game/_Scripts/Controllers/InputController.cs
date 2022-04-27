@@ -19,15 +19,19 @@ public class InputController : MonoSingleton<InputController>
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
-            if (touch.phase==TouchPhase.Began)
+            if (touch.phase == TouchPhase.Began)
             {
+                if (GameManager.Instance.GameState == GameStates.Unclickable)
+                {
+                    Clicked?.Invoke(touch.phase, Camera.main.ScreenToWorldPoint(touch.position));
+                }
                 Vector2 worldPoint = Camera.main.ScreenToWorldPoint(touch.position);
                 RaycastHit2D hit = Physics2D.Raycast(worldPoint, Vector2.zero);
                 if (hit)
                 {
                     if (hit.collider.gameObject.GetComponent<Bird>() != null)
                     {
-                        isBird=true;
+                        isBird = true;
                     }
                 }
             }
@@ -35,10 +39,12 @@ public class InputController : MonoSingleton<InputController>
             {
                 Clicked?.Invoke(touch.phase, Camera.main.ScreenToWorldPoint(touch.position));
             }
-            if (touch.phase==TouchPhase.Ended)
+            if (touch.phase == TouchPhase.Ended)
             {
-                isBird=false;
-            }            
+                isBird = false;
+            }
+
+
         }
 
     }

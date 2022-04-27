@@ -22,7 +22,6 @@ public abstract class Bird : MonoBehaviour
     protected SpringJoint2D springJoint;
     protected LineRenderer trajectoryPrediction;
     protected Vector2 startTouchPosition;
-    protected bool isTouchBird=false;
 
     #endregion
 
@@ -53,6 +52,12 @@ public abstract class Bird : MonoBehaviour
     #endregion
 
     #region Methods
+
+    protected virtual void OnSecondClickAction(TouchPhase phase, Vector2 touchPosition)
+    {
+        InputController.Instance.Clicked -= OnSecondClickAction;
+    }
+
     public void Register(Rigidbody2D throwPoint)
     {
         GetComponent<SpringJoint2D>().enabled = true;
@@ -120,7 +125,9 @@ public abstract class Bird : MonoBehaviour
                 rb.velocity = ((startTouchPosition - touchPosition).normalized * force * Vector2.Distance(transform.position, startTouchPosition));
                 trajectoryPrediction.enabled = false;
                 springJoint.enabled = false;
-                isTouchBird=true;
+                InputController.Instance.Clicked -= OnClicked;
+                GameManager.Instance.UpdateGameState(GameStates.Unclickable);
+                InputController.Instance.Clicked += OnSecondClickAction;
                 break;
 
         }
