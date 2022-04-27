@@ -22,7 +22,7 @@ public class BirdController : MonoSingleton<BirdController>
 
     [SerializeField]
     private Transform rightLinePoint;
-    
+
     [SerializeField]
     private LineRenderer leftLine;
 
@@ -77,11 +77,11 @@ public class BirdController : MonoSingleton<BirdController>
 
     public void SetSlingLines()
     {
-        leftLine.SetPosition(0,currentBird.transform.position );
+        leftLine.SetPosition(0, currentBird.transform.position);
         rightLine.SetPosition(0, currentBird.transform.position);
 
-        leftLine.SetPosition(1,BirdController.Instance.LeftLinePoint.position);
-        rightLine.SetPosition(1,BirdController.Instance.RightLinePoint.position);
+        leftLine.SetPosition(1, BirdController.Instance.LeftLinePoint.position);
+        rightLine.SetPosition(1, BirdController.Instance.RightLinePoint.position);
     }
 
     private void OnGameStateChanged(GameStates newState)
@@ -115,7 +115,13 @@ public class BirdController : MonoSingleton<BirdController>
             ScoreController.Instance.IncreaseScore((birds.Length - index) * birdScore);
             Debug.Log("succes");
         }
-        
+        else if (newState == GameStates.ReClickable)
+        {
+            rightLine.enabled = false;
+            leftLine.enabled = false;
+            GameManager.Instance.UpdateGameState(GameStates.Unclickable);
+        }
+
 
 
     }

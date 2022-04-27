@@ -2058,9 +2058,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   birdPrefabs:
-  - {fileID: 1652647683721659550, guid: 3a62e283ffd095d4ab0940f9ac43e2ff, type: 3}
-  - {fileID: 1652647683721659550, guid: 3a62e283ffd095d4ab0940f9ac43e2ff, type: 3}
-  - {fileID: 1652647683721659550, guid: 3a62e283ffd095d4ab0940f9ac43e2ff, type: 3}
+  - {fileID: 338958255066636439, guid: 3a62e283ffd095d4ab0940f9ac43e2ff, type: 3}
+  - {fileID: 304998786, guid: 582ee075cd5caf84a97b6e46677879aa, type: 3}
+  - {fileID: 338958255066636439, guid: 3a62e283ffd095d4ab0940f9ac43e2ff, type: 3}
   throwPoint: {fileID: 1217758222}
   birdScore: 1000
   leftLinePoint: {fileID: 1060077456}
