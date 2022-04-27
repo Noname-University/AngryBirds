@@ -1,9 +1,8 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bird : MonoBehaviour
+public abstract class Bird : MonoBehaviour
 {
     #region SerializeFields
 
@@ -13,7 +12,7 @@ public class Bird : MonoBehaviour
     [SerializeField]
     private float force;
 
-    
+
 
     #endregion
 
@@ -34,7 +33,7 @@ public class Bird : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         springJoint = GetComponent<SpringJoint2D>();
         trajectoryPrediction = GetComponent<LineRenderer>();
-  
+
         trajectoryPrediction.enabled = false;
         rb.velocity = Vector2.zero;
 
@@ -100,14 +99,14 @@ public class Bird : MonoBehaviour
     #endregion
 
     #region Callbacks
-    private void OnClicked(TouchPhase phase, Vector2 touchPosition)
+    public virtual void OnClicked(TouchPhase phase, Vector2 touchPosition)
     {
         var desiredPosition = touchPosition - startTouchPosition;
         desiredPosition = Vector2.ClampMagnitude(desiredPosition, maxLenght);
         switch (phase)
         {
             case TouchPhase.Began:
-                startTouchPosition = (Vector2)BirdController.Instance.ThrowPoint.position;
+                startTouchPosition = touchPosition; //(Vector2)BirdController.Instance.ThrowPoint.position;
                 trajectoryPrediction.enabled = true;
                 break;
             case TouchPhase.Moved:
@@ -121,8 +120,6 @@ public class Bird : MonoBehaviour
                 rb.velocity = ((startTouchPosition - touchPosition).normalized * force * Vector2.Distance(transform.position, startTouchPosition));
                 trajectoryPrediction.enabled = false;
                 springJoint.enabled = false;
-                InputController.Instance.Clicked -= OnClicked;
-                GameManager.Instance.UpdateGameState(GameStates.Unclickable);
                 break;
 
         }
@@ -131,4 +128,5 @@ public class Bird : MonoBehaviour
 
 
     #endregion
+
 }
