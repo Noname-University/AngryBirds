@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3391466383004445412}
   - component: {fileID: 3391466383004445413}
   - component: {fileID: 3391466383004445410}
-  - component: {fileID: 304998786}
+  - component: {fileID: 7904859234612677375}
   m_Layer: 0
   m_Name: ClickableBird
   m_TagString: Untagged
@@ -772,7 +772,7 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
---- !u!114 &304998786
+--- !u!114 &7904859234612677375
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -781,7 +781,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3391466383004445411}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ef62b23f547eaf4c93f2edd80f6bdb5, type: 3}
+  m_Script: {fileID: 11500000, guid: 1668267fcb41b6240bab15ffdc4f059e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxLenght: 5

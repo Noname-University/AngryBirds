@@ -5,5 +5,5 @@ using UnityEngine;
 
 public class EasyBird : Bird
 {
-    
+
 }
