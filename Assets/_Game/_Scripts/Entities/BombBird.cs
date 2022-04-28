@@ -13,10 +13,10 @@ public class BombBird : Bird
     [SerializeField]
     private LayerMask layerToHit;
 
-    protected override void OnSecondClickAction(TouchPhase phase, Vector2 touchPosition)
+    protected override void OnSecondClickAction()
     {
         Explode();
-        base.OnSecondClickAction(phase, touchPosition);
+        base.OnSecondClickAction();
     }
 
     private void Explode()

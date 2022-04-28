@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1649552911973007259}
   - component: {fileID: 5928714114499326243}
   - component: {fileID: -4389291502611629173}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,9 +113,9 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0.24
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -134,5 +134,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06fffa7765dbc334da077e0b9d8589e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health: 20
   scoreValue: 100

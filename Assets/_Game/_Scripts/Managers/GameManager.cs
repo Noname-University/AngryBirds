@@ -6,7 +6,9 @@ using UnityEngine;
 
 public class GameManager : MonoSingleton<GameManager>
 {
-    public event Action<GameStates> GameStateChanged;
+    public event Action<GameStates> AfterGameStateChanged;
+    public event Action<GameStates> BeforeGameStateChanged;
+
 
     public GameStates GameState => gameState;
 
@@ -20,9 +22,11 @@ public class GameManager : MonoSingleton<GameManager>
 
     public void UpdateGameState(GameStates newState)
     {
+        BeforeGameStateChanged?.Invoke(gameState);
+
         gameState = newState;
 
-        GameStateChanged?.Invoke(newState);
+        AfterGameStateChanged?.Invoke(newState);
     }
 }
 

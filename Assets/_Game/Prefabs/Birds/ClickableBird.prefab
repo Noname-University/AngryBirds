@@ -786,3 +786,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxLenght: 5
   force: 10
+  birdScore: 400

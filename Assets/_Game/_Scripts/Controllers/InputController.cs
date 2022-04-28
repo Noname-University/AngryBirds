@@ -7,6 +7,8 @@ using UnityEngine;
 public class InputController : MonoSingleton<InputController>
 {
     public event Action<TouchPhase, Vector2> Clicked;
+    public event Action SecondClicked;
+
     private bool isBird = false;
 
     private void Update()
@@ -23,7 +25,7 @@ public class InputController : MonoSingleton<InputController>
             {
                 if (GameManager.Instance.GameState == GameStates.Unclickable)
                 {
-                    Clicked?.Invoke(touch.phase, Camera.main.ScreenToWorldPoint(touch.position));
+                    SecondClicked?.Invoke();
                 }
                 Vector2 worldPoint = Camera.main.ScreenToWorldPoint(touch.position);
                 RaycastHit2D hit = Physics2D.Raycast(worldPoint, Vector2.zero);
@@ -43,9 +45,6 @@ public class InputController : MonoSingleton<InputController>
             {
                 isBird = false;
             }
-
-
         }
-
     }
 }

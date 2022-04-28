@@ -12,8 +12,6 @@ public class ScoreController : MonoSingleton<ScoreController>
     public void IncreaseScore(int scoreValue)
     {
         currentScore += scoreValue;
-        Debug.Log(currentScore);
-
     }
 
 

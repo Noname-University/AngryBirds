@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,9 @@ public abstract class Bird : MonoBehaviour
     [SerializeField]
     protected float force;
 
+    [SerializeField]
+    private int birdScore;
+
 
     #endregion
 
@@ -23,11 +27,18 @@ public abstract class Bird : MonoBehaviour
     protected LineRenderer trajectoryPrediction;
     protected Vector2 startTouchPosition;
 
+    private bool isOnAir = false;
+
+    public int BirdScore => birdScore;
+
+    //private GameStates before;
+    //private GameStates after;
+
     #endregion
 
     #region Unity Methods
 
-    private void Start()
+    protected virtual void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         springJoint = GetComponent<SpringJoint2D>();
@@ -39,6 +50,25 @@ public abstract class Bird : MonoBehaviour
         GetComponent<SpringJoint2D>().enabled = false;
     }
 
+    private void Update() 
+    {
+        if(isOnAir)
+        {
+            Vector3 diff = (transform.position + (Vector3)rb.velocity) - transform.position;
+            diff.Normalize();
+            float rotZ = Mathf.Atan2(diff.y,diff.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0,0, rotZ);
+        }
+    }
+
+    private void OnBeforeGameStateChanged(GameStates oldState)
+    {
+        if (oldState == GameStates.Unclickable)
+        {
+            InputController.Instance.SecondClicked -= OnSecondClickAction;
+            GameManager.Instance.BeforeGameStateChanged -= OnBeforeGameStateChanged;
+        }
+    }
 
     private void OnCollisionEnter2D(Collision2D other)
     {
@@ -47,15 +77,17 @@ public abstract class Bird : MonoBehaviour
         {
             destroyable.Hit(rb.velocity.magnitude);
         }
+        isOnAir = false;
     }
 
     #endregion
 
     #region Methods
 
-    protected virtual void OnSecondClickAction(TouchPhase phase, Vector2 touchPosition)
+    protected virtual void OnSecondClickAction()
     {
-        InputController.Instance.Clicked -= OnSecondClickAction;
+        InputController.Instance.SecondClicked -= OnSecondClickAction;
+        GameManager.Instance.BeforeGameStateChanged -= OnBeforeGameStateChanged;
     }
 
     public void Register(Rigidbody2D throwPoint)
@@ -111,7 +143,7 @@ public abstract class Bird : MonoBehaviour
         switch (phase)
         {
             case TouchPhase.Began:
-                startTouchPosition = touchPosition; //(Vector2)BirdController.Instance.ThrowPoint.position;
+                startTouchPosition = touchPosition;
                 trajectoryPrediction.enabled = true;
                 break;
             case TouchPhase.Moved:
@@ -122,18 +154,17 @@ public abstract class Bird : MonoBehaviour
                 transform.position = startTouchPosition + desiredPosition;
                 break;
             case TouchPhase.Ended:
-                rb.velocity = ((startTouchPosition - touchPosition).normalized * force * Vector2.Distance(transform.position, startTouchPosition));
+                rb.velocity = desiredPosition * -force;
                 trajectoryPrediction.enabled = false;
                 springJoint.enabled = false;
                 InputController.Instance.Clicked -= OnClicked;
                 GameManager.Instance.UpdateGameState(GameStates.Unclickable);
-                InputController.Instance.Clicked += OnSecondClickAction;
+                InputController.Instance.SecondClicked += OnSecondClickAction;
+                GameManager.Instance.BeforeGameStateChanged += OnBeforeGameStateChanged;
+                isOnAir = true;
                 break;
-
         }
-
     }
-
 
     #endregion
 

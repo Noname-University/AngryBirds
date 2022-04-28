@@ -672,7 +672,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -4389291502611629173, guid: eddbf49f5757d7047a7ed996a91b32f4, type: 3}
       propertyPath: health
-      value: 20
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 689527614994122058, guid: eddbf49f5757d7047a7ed996a91b32f4, type: 3}
       propertyPath: m_Name
@@ -1683,7 +1683,7 @@ Transform:
   m_GameObject: {fileID: 1608536902}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 22.28, y: -4.31, z: 0}
-  m_LocalScale: {x: 66.39168, y: 2, z: 1}
+  m_LocalScale: {x: 164.53, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 1731561706}
   m_RootOrder: 3
@@ -2063,10 +2063,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   birdPrefabs:
   - {fileID: -1289382616576449328, guid: 0413c39428456d343bae06c838dd5049, type: 3}
+  - {fileID: -1289382616576449328, guid: 0413c39428456d343bae06c838dd5049, type: 3}
   - {fileID: 48015377188656002, guid: 3a62e283ffd095d4ab0940f9ac43e2ff, type: 3}
   - {fileID: 7938127122790351332, guid: 169a4a0a493d7b24db7221983c06bd48, type: 3}
+  - {fileID: 7904859234612677375, guid: 582ee075cd5caf84a97b6e46677879aa, type: 3}
   throwPoint: {fileID: 1217758222}
-  birdScore: 1000
   leftLinePoint: {fileID: 1060077456}
   rightLinePoint: {fileID: 1578731223}
   leftLine: {fileID: 1060077457}
@@ -2286,15 +2287,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -4389291502611629173, guid: eddbf49f5757d7047a7ed996a91b32f4, type: 3}
       propertyPath: health
-      value: 20
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 689527614994122058, guid: eddbf49f5757d7047a7ed996a91b32f4, type: 3}
       propertyPath: m_Name
       value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 689527614994122058, guid: eddbf49f5757d7047a7ed996a91b32f4, type: 3}
-      propertyPath: m_Layer
-      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3465325675827102889, guid: eddbf49f5757d7047a7ed996a91b32f4, type: 3}
       propertyPath: m_RootOrder

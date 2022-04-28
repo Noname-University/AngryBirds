@@ -15,9 +15,6 @@ public class BirdController : MonoSingleton<BirdController>
     private GameObject throwPoint;
 
     [SerializeField]
-    private int birdScore;
-
-    [SerializeField]
     private Transform leftLinePoint;
 
     [SerializeField]
@@ -49,7 +46,7 @@ public class BirdController : MonoSingleton<BirdController>
             var bird = Instantiate(birdPrefabs[i], new Vector3(-i * 2 - 2, 1f, 0), Quaternion.identity);
             birds[i] = bird;
         }
-        GameManager.Instance.GameStateChanged += OnGameStateChanged;
+        GameManager.Instance.AfterGameStateChanged += OnGameStateChanged;
     }
     private void Update()
     {
@@ -112,7 +109,12 @@ public class BirdController : MonoSingleton<BirdController>
         else if (newState == GameStates.Success)
         {
             isTimerActive = false;
-            ScoreController.Instance.IncreaseScore((birds.Length - index) * birdScore);
+            for (int i = index; i < birds.Length; i++)
+            {
+                ScoreController.Instance.IncreaseScore(birds[i].GetComponent<Bird>().BirdScore);
+                Debug.Log(birds[i].name + birds[i].GetComponent<Bird>().BirdScore);
+            }
+            
             Debug.Log("succes");
         }
         else if (newState == GameStates.ReClickable)
