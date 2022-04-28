@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6009494572977200154}
   - component: {fileID: 7602834271249609124}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sprite1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1468244065799275673}
   - component: {fileID: 3279109778958479996}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sprite3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: 8931892298224160532}
   - component: {fileID: 6835901523531681198}
   - component: {fileID: 2757845176045250326}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 'TallWood '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -240,7 +240,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 10
-  m_LinearDrag: 0
+  m_LinearDrag: 5
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -272,7 +272,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8178012620010842343}
   - component: {fileID: 6512007506815576214}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sprite4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -354,7 +354,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1030389431950705952}
   - component: {fileID: 7536085791451130366}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sprite2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

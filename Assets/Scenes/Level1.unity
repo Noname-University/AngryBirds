@@ -132,7 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 99380556}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemies
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -672,11 +672,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -4389291502611629173, guid: eddbf49f5757d7047a7ed996a91b32f4, type: 3}
       propertyPath: health
-      value: 6
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 689527614994122058, guid: eddbf49f5757d7047a7ed996a91b32f4, type: 3}
       propertyPath: m_Name
       value: Enemy (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 689527614994122058, guid: eddbf49f5757d7047a7ed996a91b32f4, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1634537596241832578, guid: eddbf49f5757d7047a7ed996a91b32f4, type: 3}
       propertyPath: m_SortingOrder
@@ -1302,7 +1306,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1287384110}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Obstacle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2058,7 +2062,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   birdPrefabs:
-  - {fileID: 338958255066636439, guid: 3a62e283ffd095d4ab0940f9ac43e2ff, type: 3}
+  - {fileID: -1289382616576449328, guid: 0413c39428456d343bae06c838dd5049, type: 3}
   - {fileID: 304998786, guid: 582ee075cd5caf84a97b6e46677879aa, type: 3}
   - {fileID: 338958255066636439, guid: 3a62e283ffd095d4ab0940f9ac43e2ff, type: 3}
   throwPoint: {fileID: 1217758222}
@@ -2280,9 +2284,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 99380556}
     m_Modifications:
+    - target: {fileID: -4389291502611629173, guid: eddbf49f5757d7047a7ed996a91b32f4, type: 3}
+      propertyPath: health
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 689527614994122058, guid: eddbf49f5757d7047a7ed996a91b32f4, type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 689527614994122058, guid: eddbf49f5757d7047a7ed996a91b32f4, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3465325675827102889, guid: eddbf49f5757d7047a7ed996a91b32f4, type: 3}
       propertyPath: m_RootOrder

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5668123199734934306}
   - component: {fileID: 8380506220206212764}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sprite1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 7366569324181108780}
   - component: {fileID: 4832709065215851158}
   - component: {fileID: 6851413077498145895}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SquareWood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -158,7 +158,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 10
-  m_LinearDrag: 0
+  m_LinearDrag: 5
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -190,7 +190,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7362350671465891211}
   - component: {fileID: 3232937638985692403}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sprite4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -272,7 +272,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7559363240322543162}
   - component: {fileID: 2564104621583272875}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sprite2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -354,7 +354,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2279694119471348789}
   - component: {fileID: 1471573083276802243}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sprite3
   m_TagString: Untagged
   m_Icon: {fileID: 0}

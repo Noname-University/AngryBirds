@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5858305399629067796}
   - component: {fileID: 7099115129388804285}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sprite4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4723761236123441059}
   - component: {fileID: 849745649466824331}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sprite3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: 7067508364997468728}
   - component: {fileID: 7067508364997468729}
   - component: {fileID: -5147005472439091674}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MidWood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -240,7 +240,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 10
-  m_LinearDrag: 0
+  m_LinearDrag: 5
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -272,7 +272,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7067508365142015474}
   - component: {fileID: 7067508365142015472}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sprite1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -354,7 +354,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7893764941553675665}
   - component: {fileID: 9127612333850145935}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sprite2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
