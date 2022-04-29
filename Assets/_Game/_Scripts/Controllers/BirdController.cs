@@ -114,7 +114,7 @@ public class BirdController : MonoSingleton<BirdController>
                 ScoreController.Instance.IncreaseScore(birds[i].GetComponent<Bird>().BirdScore);
                 Debug.Log(birds[i].name + birds[i].GetComponent<Bird>().BirdScore);
             }
-            
+
             Debug.Log("succes");
         }
         else if (newState == GameStates.ReClickable)
