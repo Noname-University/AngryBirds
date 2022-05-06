@@ -16,6 +16,7 @@ public class LevelController : MonoBehaviour
     [SerializeField]
     private Button getMainMenuButton;
 
+
     private void Start()
     {
         endGamePanel.gameObject.SetActive(false);
@@ -27,10 +28,10 @@ public class LevelController : MonoBehaviour
     {
         if (newState == GameStates.Success)
         {
-
-            if (PlayerPrefs.GetInt("level") <= SceneManager.GetActiveScene().buildIndex)
+            if (PlayerPrefs.GetInt("Level") <= SceneManager.GetActiveScene().buildIndex)
             {
-                PlayerPrefs.SetInt("level", PlayerPrefs.GetInt("level") + 1);
+                PlayerPrefs.SetInt("Level", SceneManager.GetActiveScene().buildIndex + 1);
+                Debug.Log(PlayerPrefs.GetInt("Level") + " " + "Level");
             }
             GoNextLevel();
         }

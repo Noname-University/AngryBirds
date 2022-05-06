@@ -19,11 +19,11 @@ public class MainMenuController : MonoBehaviour
         levelsPanel.gameObject.SetActive(false);
         backgroundPanel.gameObject.SetActive(true);
         currentLevel = PlayerPrefs.GetInt("Level");
+        Debug.Log(currentLevel);
 
         if (currentLevel == 0)
         {
             currentLevel = 1;
-
         }
 
         for (int i = currentLevel; i < buttons.Length; i++)
@@ -41,6 +41,12 @@ public class MainMenuController : MonoBehaviour
             buttons[i - 1].onClick.AddListener(() => GetLevel(temp));
             buttons[i - 1].transform.GetChild(0).GetComponent<Text>().text = i.ToString();
         }
+
+    }
+    private void Update()
+    {
+        //currentLevel = PlayerPrefs.GetInt("Level");
+
     }
 
     private void GetLevel(int level)
