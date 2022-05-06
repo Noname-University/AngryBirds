@@ -1,56 +1,1200 @@
 fileFormatVersion: 2
 guid: 995ac4d8a2ba2c84e9bcf5b1d35a43c2
-timeCreated: 1466648891
-licenseType: Pro
 TextureImporter:
-  fileIDToRecycleName: {}
-  serializedVersion: 2
+  internalIDToNameTable:
+  - first:
+      213: 8097367539351054180
+    second: MENU_TROPHY_ROOM_1_0
+  - first:
+      213: -3965780986793537654
+    second: MENU_TROPHY_ROOM_1_1
+  - first:
+      213: 3521047071593835401
+    second: MENU_TROPHY_ROOM_1_2
+  - first:
+      213: 835380842431806468
+    second: MENU_TROPHY_ROOM_1_3
+  - first:
+      213: 8987322597246201256
+    second: MENU_TROPHY_ROOM_1_4
+  - first:
+      213: 6571465899441165820
+    second: MENU_TROPHY_ROOM_1_5
+  - first:
+      213: -3440931395298434516
+    second: MENU_TROPHY_ROOM_1_6
+  - first:
+      213: -6001715319751530799
+    second: MENU_TROPHY_ROOM_1_7
+  - first:
+      213: -4147883662728660610
+    second: MENU_TROPHY_ROOM_1_8
+  - first:
+      213: -622885265926930808
+    second: MENU_TROPHY_ROOM_1_9
+  - first:
+      213: -7734656959672385936
+    second: MENU_TROPHY_ROOM_1_10
+  - first:
+      213: -966976287335629365
+    second: MENU_TROPHY_ROOM_1_11
+  - first:
+      213: 934537234961950560
+    second: MENU_TROPHY_ROOM_1_12
+  - first:
+      213: 5221208531439991920
+    second: MENU_TROPHY_ROOM_1_13
+  - first:
+      213: -7228101741674429111
+    second: MENU_TROPHY_ROOM_1_14
+  - first:
+      213: -3553041945370212591
+    second: MENU_TROPHY_ROOM_1_15
+  - first:
+      213: -6129388894936285620
+    second: MENU_TROPHY_ROOM_1_16
+  - first:
+      213: -2682335671204945837
+    second: MENU_TROPHY_ROOM_1_17
+  - first:
+      213: 7413910043977730167
+    second: MENU_TROPHY_ROOM_1_18
+  - first:
+      213: 5080466285458222800
+    second: MENU_TROPHY_ROOM_1_19
+  - first:
+      213: -4796807422164687975
+    second: MENU_TROPHY_ROOM_1_20
+  - first:
+      213: 4413885354297125213
+    second: MENU_TROPHY_ROOM_1_21
+  - first:
+      213: 6867805578112750708
+    second: MENU_TROPHY_ROOM_1_22
+  - first:
+      213: -9083437771950451401
+    second: MENU_TROPHY_ROOM_1_23
+  - first:
+      213: 6995725598986656831
+    second: MENU_TROPHY_ROOM_1_24
+  - first:
+      213: -7794235217372318038
+    second: MENU_TROPHY_ROOM_1_25
+  - first:
+      213: -2316791144488445838
+    second: MENU_TROPHY_ROOM_1_26
+  - first:
+      213: 1331843718137718894
+    second: MENU_TROPHY_ROOM_1_27
+  - first:
+      213: -6514578481243995356
+    second: MENU_TROPHY_ROOM_1_28
+  - first:
+      213: -2389202304011688985
+    second: MENU_TROPHY_ROOM_1_29
+  - first:
+      213: 513259392947389143
+    second: MENU_TROPHY_ROOM_1_30
+  - first:
+      213: 8646933637978932365
+    second: MENU_TROPHY_ROOM_1_31
+  - first:
+      213: 7291822376478557765
+    second: MENU_TROPHY_ROOM_1_32
+  - first:
+      213: 4739723576713994278
+    second: MENU_TROPHY_ROOM_1_33
+  - first:
+      213: -7496028897901515875
+    second: MENU_TROPHY_ROOM_1_34
+  - first:
+      213: 5513270166975172290
+    second: MENU_TROPHY_ROOM_1_35
+  - first:
+      213: -6420583249327394903
+    second: MENU_TROPHY_ROOM_1_36
+  - first:
+      213: -7566256121104430128
+    second: MENU_TROPHY_ROOM_1_37
+  - first:
+      213: -8279553567344188038
+    second: MENU_TROPHY_ROOM_1_38
+  - first:
+      213: 3272911571591629363
+    second: MENU_TROPHY_ROOM_1_39
+  - first:
+      213: -8277220742142599322
+    second: MENU_TROPHY_ROOM_1_40
+  - first:
+      213: -6657877021913101467
+    second: MENU_TROPHY_ROOM_1_41
+  - first:
+      213: 8059099464240167271
+    second: MENU_TROPHY_ROOM_1_42
+  - first:
+      213: -6513822040383942877
+    second: MENU_TROPHY_ROOM_1_43
+  - first:
+      213: 7436156673732851030
+    second: MENU_TROPHY_ROOM_1_44
+  - first:
+      213: 369659553793845487
+    second: MENU_TROPHY_ROOM_1_45
+  externalObjects: {}
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
+    sRGBTexture: 1
     linearTexture: 0
-    correctGamma: 0
     fadeOut: 0
     borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
   bumpmap:
     convertToNormalMap: 0
     externalNormalMap: 0
-    heightScale: .25
+    heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
   grayScaleToAlpha: 0
-  generateCubemap: 0
+  generateCubemap: 6
   cubemapConvolution: 0
-  cubemapConvolutionSteps: 8
-  cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -3
   maxTextureSize: 1024
   textureSettings:
-    filterMode: -1
+    serializedVersion: 2
+    filterMode: 1
     aniso: 16
-    mipBias: -1
-    wrapMode: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
-  rGBM: 0
   compressionQuality: 50
-  allowsAlphaSplitting: 0
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
-  spritePivot: {x: .5, y: .5}
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
   alphaIsTransparency: 1
+  spriteTessellationDetail: -1
   textureType: 8
-  buildTargetSettings: []
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
-    sprites: []
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MENU_TROPHY_ROOM_1_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 647
+        width: 122
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4676cc610e0af5070800000000000000
+      internalID: 8097367539351054180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_TROPHY_ROOM_1_1
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 673
+        width: 157
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8f4c214437b6f8c0800000000000000
+      internalID: -3965780986793537654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_TROPHY_ROOM_1_2
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 708
+        width: 171
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98ba7c308a54dd030800000000000000
+      internalID: 3521047071593835401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_TROPHY_ROOM_1_3
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 718
+        width: 162
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40c705d337ed79b00800000000000000
+      internalID: 835380842431806468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_TROPHY_ROOM_1_4
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 723
+        width: 163
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ad63ba094269bc70800000000000000
+      internalID: 8987322597246201256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_TROPHY_ROOM_1_5
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 726
+        width: 155
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf598cd1b69823b50800000000000000
+      internalID: 6571465899441165820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_TROPHY_ROOM_1_6
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 410
+        width: 113
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c226fb6702b5f30d0800000000000000
+      internalID: -3440931395298434516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_TROPHY_ROOM_1_7
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 461
+        width: 148
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d6a03317bf95bca0800000000000000
+      internalID: -6001715319751530799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_TROPHY_ROOM_1_8
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 544
+        width: 155
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e79796109c1cf66c0800000000000000
+      internalID: -4147883662728660610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_TROPHY_ROOM_1_9
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 578
+        width: 151
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88eb99c96211b57f0800000000000000
+      internalID: -622885265926930808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_TROPHY_ROOM_1_10
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 583
+        width: 141
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07e7933a97af8a490800000000000000
+      internalID: -7734656959672385936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_TROPHY_ROOM_1_11
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 588
+        width: 142
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcd322f903c9492f0800000000000000
+      internalID: -966976287335629365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_TROPHY_ROOM_1_12
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 604
+        width: 111
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 067684fe9a428fc00800000000000000
+      internalID: 934537234961950560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_TROPHY_ROOM_1_13
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 382
+        width: 154
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07c38b60f75757840800000000000000
+      internalID: 5221208531439991920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_TROPHY_ROOM_1_14
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 468
+        width: 183
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9450d1713cf90bb90800000000000000
+      internalID: -7228101741674429111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_TROPHY_ROOM_1_15
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 468
+        width: 169
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 117452eec2f01bec0800000000000000
+      internalID: -3553041945370212591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_TROPHY_ROOM_1_16
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 471
+        width: 138
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4e3913664900faa0800000000000000
+      internalID: -6129388894936285620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_TROPHY_ROOM_1_17
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 487
+        width: 69
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 350687d2bed66cad0800000000000000
+      internalID: -2682335671204945837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_TROPHY_ROOM_1_18
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 278
+        width: 121
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7784ef787ef73e660800000000000000
+      internalID: 7413910043977730167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_TROPHY_ROOM_1_19
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 260
+        width: 148
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dee51e4b21718640800000000000000
+      internalID: 5080466285458222800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_TROPHY_ROOM_1_20
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 223
+        width: 146
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 993aae960115e6db0800000000000000
+      internalID: -4796807422164687975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_TROPHY_ROOM_1_21
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 363
+        width: 135
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d59ed2e0855414d30800000000000000
+      internalID: 4413885354297125213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_TROPHY_ROOM_1_22
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 368
+        width: 174
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4745bdd39c85f4f50800000000000000
+      internalID: 6867805578112750708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_TROPHY_ROOM_1_23
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 371
+        width: 129
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7351787f87521f180800000000000000
+      internalID: -9083437771950451401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_TROPHY_ROOM_1_24
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 261
+        width: 107
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3cd4b90e5fc51160800000000000000
+      internalID: 6995725598986656831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_TROPHY_ROOM_1_25
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 272
+        width: 133
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa6feac8d5055d390800000000000000
+      internalID: -7794235217372318038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_TROPHY_ROOM_1_26
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 276
+        width: 113
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 278defd9aba19dfd0800000000000000
+      internalID: -2316791144488445838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_TROPHY_ROOM_1_27
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 278
+        width: 95
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e682fe32ec8ab7210800000000000000
+      internalID: 1331843718137718894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_TROPHY_ROOM_1_28
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 292
+        width: 82
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4234c0413619795a0800000000000000
+      internalID: -6514578481243995356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_TROPHY_ROOM_1_29
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 166
+        width: 116
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e3a6dcb929d7ded0800000000000000
+      internalID: -2389202304011688985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_TROPHY_ROOM_1_30
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 66
+        width: 139
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d20342d2b67f1700800000000000000
+      internalID: 513259392947389143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_TROPHY_ROOM_1_31
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 69
+        width: 146
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d844c109454100870800000000000000
+      internalID: 8646933637978932365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_TROPHY_ROOM_1_32
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 160
+        width: 97
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 546cf3351d1c13560800000000000000
+      internalID: 7291822376478557765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_TROPHY_ROOM_1_33
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 177
+        width: 126
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 620e49b1b71e6c140800000000000000
+      internalID: 4739723576713994278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_TROPHY_ROOM_1_34
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 186
+        width: 89
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9b648ade61c8f790800000000000000
+      internalID: -7496028897901515875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_TROPHY_ROOM_1_35
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 187
+        width: 101
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ce405d9102138c40800000000000000
+      internalID: 5513270166975172290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_TROPHY_ROOM_1_36
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 187
+        width: 101
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9af640d6d8185e6a0800000000000000
+      internalID: -6420583249327394903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_TROPHY_ROOM_1_37
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 61
+        width: 115
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0db02f545224ff690800000000000000
+      internalID: -7566256121104430128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_TROPHY_ROOM_1_38
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 62
+        width: 99
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a75a1afb5ed191d80800000000000000
+      internalID: -8279553567344188038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_TROPHY_ROOM_1_39
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 83
+        width: 99
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33a0cf5dbb7bb6d20800000000000000
+      internalID: 3272911571591629363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_TROPHY_ROOM_1_40
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 99
+        width: 112
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66f5811f697612d80800000000000000
+      internalID: -8277220742142599322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_TROPHY_ROOM_1_41
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 11
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56b42ae9f187a93a0800000000000000
+      internalID: -6657877021913101467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_TROPHY_ROOM_1_42
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 39
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7697397834ca7df60800000000000000
+      internalID: 8059099464240167271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_TROPHY_ROOM_1_43
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 1
+        width: 128
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32f0ec0bd514a95a0800000000000000
+      internalID: -6513822040383942877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_TROPHY_ROOM_1_44
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 3
+        width: 115
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6553ff7a819823760800000000000000
+      internalID: 7436156673732851030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_TROPHY_ROOM_1_45
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 25
+        width: 106
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe826b7d76b412500800000000000000
+      internalID: 369659553793845487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5fd7737d89db6fc40803f76f5e248927
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
   spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

@@ -12,7 +12,7 @@ TagManager:
   - Water
   - UI
   - Explode
-  - 
+  - Stars
   - 
   - 
   - 
@@ -58,4 +58,7 @@ TagManager:
     locked: 0
   - name: SlingFront
     uniqueID: 984719035
+    locked: 0
+  - name: Stars
+    uniqueID: 1532737817
     locked: 0
