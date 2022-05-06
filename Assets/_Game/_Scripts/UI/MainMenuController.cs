@@ -19,33 +19,37 @@ public class MainMenuController : MonoBehaviour
         levelsPanel.gameObject.SetActive(false);
         backgroundPanel.gameObject.SetActive(true);
         currentLevel = PlayerPrefs.GetInt("Level");
-        Debug.Log(currentLevel);
 
         if (currentLevel == 0)
         {
             currentLevel = 1;
         }
 
-        for (int i = currentLevel; i < buttons.Length; i++)
-        {
-            buttons[i].interactable = false;
-        }
         for (int i = 0; i < currentLevel; i++)
         {
             buttons[i].interactable = true;
+            var currentLevelStar = PlayerPrefs.GetInt((i+1).ToString());
+            print(currentLevel + " "+ currentLevelStar);
+            for (int j = currentLevelStar; j < 3; j++)
+            {
+                buttons[i].transform.GetChild(j).gameObject.SetActive(false);
+            }
+        }
+        for (int i = currentLevel; i < buttons.Length; i++)
+        {
+            buttons[i].interactable = false;
+            for (int j = 0; j < 3; j++)
+            {
+                buttons[i].transform.GetChild(j).gameObject.SetActive(false);
+            }
         }
 
         for (int i = 1; i <= buttons.Length; i++)
         {
             int temp = i; // closure problem
             buttons[i - 1].onClick.AddListener(() => GetLevel(temp));
-            buttons[i - 1].transform.GetChild(0).GetComponent<Text>().text = i.ToString();
+            buttons[i - 1].transform.GetChild(6).GetComponent<Text>().text = i.ToString();
         }
-
-    }
-    private void Update()
-    {
-        //currentLevel = PlayerPrefs.GetInt("Level");
 
     }
 
@@ -58,10 +62,12 @@ public class MainMenuController : MonoBehaviour
     {
         SceneManager.LoadScene(currentLevel);
     }
+
     public void QuitGame()
     {
         Application.Quit();
     }
+
     public void GetLevelsPanel()
     {
         backgroundPanel.gameObject.SetActive(false);

@@ -1,27 +1,23 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Helpers;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-public class LevelController : MonoBehaviour
+public class LevelController : MonoSingleton<LevelController>
 {
-    [SerializeField]
-    private GameObject endGamePanel;
+    private int currentLevel;
+    public int CurrentLevel => currentLevel;
 
-    [SerializeField]
-    private Button restartButton;
-    [SerializeField]
-    private Button nextLevelButton;
-    [SerializeField]
-    private Button getMainMenuButton;
-
+    private void Awake() 
+    {
+        currentLevel = PlayerPrefs.GetInt("Level");
+    }
 
     private void Start()
     {
-        endGamePanel.gameObject.SetActive(false);
         GameManager.Instance.AfterGameStateChanged += OnAfterGameStateChanged;
-
     }
 
     private void OnAfterGameStateChanged(GameStates newState)
@@ -31,26 +27,13 @@ public class LevelController : MonoBehaviour
             if (PlayerPrefs.GetInt("Level") <= SceneManager.GetActiveScene().buildIndex)
             {
                 PlayerPrefs.SetInt("Level", SceneManager.GetActiveScene().buildIndex + 1);
-                Debug.Log(PlayerPrefs.GetInt("Level") + " " + "Level");
             }
-            GoNextLevel();
-        }
-        else if (newState == GameStates.Fail)
-        {
-            RestartLevel();
         }
     }
 
-    private void RestartLevel()
+    public void SetStarCount(int currentLevelStar)
     {
-        endGamePanel.gameObject.SetActive(true);
-        nextLevelButton.interactable = false;
-    }
-
-    private void GoNextLevel()
-    {
-        endGamePanel.gameObject.SetActive(true);
-        restartButton.interactable = false;
+        PlayerPrefs.SetInt(SceneManager.GetActiveScene().buildIndex.ToString(), currentLevelStar);
     }
 
     public void Restart()
@@ -66,4 +49,6 @@ public class LevelController : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
+
+    
 }
