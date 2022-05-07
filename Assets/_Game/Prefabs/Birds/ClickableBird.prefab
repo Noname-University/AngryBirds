@@ -784,6 +784,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1668267fcb41b6240bab15ffdc4f059e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLenght: 5
+  maxLenght: 2.5
   force: 10
   birdScore: 400

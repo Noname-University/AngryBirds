@@ -6,7 +6,7 @@ public class ReClickableBird : Bird
 {
     protected override void OnSecondClickAction()
     {
-        rb.velocity *= 3.5f;
+        rb.velocity *= 1.5f;
         base.OnSecondClickAction();
     }
 }

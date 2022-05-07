@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0ac81fc338382b49868f22a31297cad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLenght: 5
+  maxLenght: 2.5
   force: 15
   birdScore: 500
   radius: 3.5
