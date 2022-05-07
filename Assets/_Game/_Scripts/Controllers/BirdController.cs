@@ -43,7 +43,8 @@ public class BirdController : MonoSingleton<BirdController>
         birds = new Bird[birdPrefabs.Length];
         for (int i = 0; i < birdPrefabs.Length; i++)
         {
-            var bird = Instantiate(birdPrefabs[i], new Vector3(-i * 2 - 2, 1f, 0), Quaternion.identity);
+            var bird = Instantiate(birdPrefabs[i], new Vector3(-i * 2 - 3, 1f, 0), Quaternion.identity);
+            bird.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
             birds[i] = bird;
         }
         GameManager.Instance.AfterGameStateChanged += OnGameStateChanged;
@@ -86,10 +87,16 @@ public class BirdController : MonoSingleton<BirdController>
         if (newState == GameStates.Clickable && birdPrefabs.Length > index)
         {
             currentBird = birds[index];
+            currentBird.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
             currentBird.transform.position = throwPoint.transform.position;
             currentBird.Register(throwPoint.GetComponent<Rigidbody2D>());
             rightLine.enabled = true;
             leftLine.enabled = true;
+
+            for (int i = index + 1; i < birds.Length; i++)
+            {
+                birds[i].transform.LeanMoveX(birds[i].transform.position.x + 2, .5f);
+            }
 
         }
         else if (newState == GameStates.Unclickable && birdPrefabs.Length > index)

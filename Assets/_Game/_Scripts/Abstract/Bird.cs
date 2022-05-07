@@ -26,6 +26,7 @@ public abstract class Bird : MonoBehaviour
     protected SpringJoint2D springJoint;
     protected LineRenderer trajectoryPrediction;
     protected Vector2 startTouchPosition;
+    private Vector2 throwPoint;
 
     private bool isOnAir = false;
 
@@ -46,6 +47,7 @@ public abstract class Bird : MonoBehaviour
 
         trajectoryPrediction.enabled = false;
         rb.velocity = Vector2.zero;
+        throwPoint = (Vector2)BirdController.Instance.ThrowPoint.position;
 
         GetComponent<SpringJoint2D>().enabled = false;
     }
@@ -138,20 +140,19 @@ public abstract class Bird : MonoBehaviour
     #region Callbacks
     public virtual void OnClicked(TouchPhase phase, Vector2 touchPosition)
     {
-        var desiredPosition = touchPosition - startTouchPosition;
+        var desiredPosition = touchPosition - (Vector2)BirdController.Instance.ThrowPoint.position;
         desiredPosition = Vector2.ClampMagnitude(desiredPosition, maxLenght);
         switch (phase)
         {
             case TouchPhase.Began:
-                startTouchPosition = touchPosition;
                 trajectoryPrediction.enabled = true;
                 break;
             case TouchPhase.Moved:
-                transform.position = startTouchPosition + desiredPosition;
-                SetTrajectoryPositions(touchPosition, startTouchPosition);
+                transform.position = throwPoint + desiredPosition;
+                SetTrajectoryPositions(touchPosition, throwPoint);
                 break;
             case TouchPhase.Stationary:
-                transform.position = startTouchPosition + desiredPosition;
+                transform.position = throwPoint + desiredPosition;
                 break;
             case TouchPhase.Ended:
                 rb.velocity = desiredPosition * -force;
