@@ -29,7 +29,6 @@ public class MainMenuController : MonoBehaviour
         {
             buttons[i].interactable = true;
             var currentLevelStar = PlayerPrefs.GetInt((i+1).ToString());
-            print(currentLevel + " "+ currentLevelStar);
             for (int j = currentLevelStar; j < 3; j++)
             {
                 buttons[i].transform.GetChild(j).gameObject.SetActive(false);

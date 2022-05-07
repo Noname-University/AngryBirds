@@ -146,6 +146,7 @@ public abstract class Bird : MonoBehaviour
         {
             case TouchPhase.Began:
                 trajectoryPrediction.enabled = true;
+                SetTrajectoryPositions(touchPosition, throwPoint);
                 break;
             case TouchPhase.Moved:
                 transform.position = throwPoint + desiredPosition;
